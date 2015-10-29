@@ -1,0 +1,9 @@
+
+# IDEs
+/.idea/
+
+# build
+/env/
+/build/
+/dist/
+/*.egg-info/
