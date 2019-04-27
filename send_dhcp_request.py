@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+from __future__ import print_function
 from random import Random
 from argparse import ArgumentParser
 from pydhcplib.dhcp_packet import DhcpPacket
@@ -72,7 +73,7 @@ def main():
     hostname = opts.hostname
 
     req = prepare_packet(chaddr=chaddr, ciaddr=ciaddr, hostname=hostname)
-    print "Sending REQUEST [%s] packet to %s" % (chaddr, serverip)
+    print("Sending REQUEST [%s] packet to %s" % (chaddr, serverip))
     send_packet(serverip=serverip, serverport=opts.port, req=req)
 
 
